@@ -1,4 +1,4 @@
-from typing import Tuple, Literal
+from typing import Tuple, Literal, List
 
 class Flames:
     F: str = 'Friends'
@@ -24,8 +24,24 @@ def remove_common_chars(str1: str, str2: str) -> Tuple[str, str]:
     
     return op_str1, op_str2
 
+def calculate_flames_code(str1: str, str2: str) -> Literal['F', 'L', 'A', 'M', 'E', 'S']:
+    flames: List = list('FLAMES')
+
+    maxx = len(str1) + len(str2)
+    i = 0
+    while len(flames) > 1:
+        i = (i + maxx - 1) % len(flames)
+        flames.pop(i)
+    
+    return flames[0]
+
+
 if __name__ == '__main__':
     name1: str = 'AJAY'
     name2: str = 'PRIYA'
 
-    print(remove_common_chars(name1, name2))
+    # remove common characters
+    uni_name1, uni_name2 = remove_common_chars(name1, name2)
+
+    flames = Flames()
+    print(getattr(flames, calculate_flames_code(uni_name1, uni_name2)))
