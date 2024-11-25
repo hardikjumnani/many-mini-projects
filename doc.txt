@@ -1,1 +1,16 @@
 https://www.geeksforgeeks.org/python-projects-beginner-to-advanced/?ref=lbp
+
+Used:
+Python Concepts:
+    Exception Handling
+    OOPS
+    Generators
+    staticmethod
+    Literal
+    getattr(), isinstance()
+
+Libraries:
+    from plyer import notification
+    typing
+    openpyxl
+    smtplib & email
