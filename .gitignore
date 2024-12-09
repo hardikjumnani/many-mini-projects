@@ -5,3 +5,4 @@ temp.py
 3temp.py
 leave-tracker/attendance_records.xlsx
 leave-tracker/password.py
+**/__pycache__/
