@@ -14,3 +14,4 @@ Libraries:
     typing
     openpyxl
     smtplib & email
+    pywebio
